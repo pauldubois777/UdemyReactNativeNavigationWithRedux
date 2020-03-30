@@ -1,23 +1,26 @@
 import React from 'react';
-import { Button, StyleSheet, Text, View } from 'react-native';
+import { Button, FlatList, StyleSheet, Text, View } from 'react-native';
 
 import commonStyles from '../constants/commonStyles';
+import { CATEGORIES } from '../mocks/mockData';
 
 const CategoriesScreen = props => {
   const {
     navigation: { navigate }
   } = props;
 
+  const renderGridItem = itemData => {
+    const { item } = itemData;
+
+    return (
+      <View>
+        <Text>{item.title}</Text>
+      </View>
+    );
+  };
+
   return (
-    <View style={styles.screen}>
-      <Text>Categories Screen</Text>
-      <Button
-        title="Go to Meals"
-        onPress={() => {
-          navigate({ routeName: 'CategoryMealsScreen' });
-        }}
-      />
-    </View>
+    <FlatList data={CATEGORIES} numColumns={2} renderItem={renderGridItem} />
   );
 };
 
