@@ -12,7 +12,12 @@ const CategoriesScreen = props => {
   const renderCategoryItem = itemData => {
     const { item } = itemData;
 
-    return <CategoryItem item={item} />;
+    return (
+      <CategoryItem
+        item={item}
+        onPress={() => navigate('CategoryMealsScreen')}
+      />
+    );
   };
 
   return (

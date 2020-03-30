@@ -1,13 +1,15 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 
 const CategoryItem = props => {
   const { item } = props;
 
   return (
-    <View style={styles.categoryItemView}>
-      <Text>{item.title}</Text>
-    </View>
+    <TouchableOpacity onPress={props.onPress} style={styles.categoryItemView}>
+      <View>
+        <Text>{item.title}</Text>
+      </View>
+    </TouchableOpacity>
   );
 };
 
