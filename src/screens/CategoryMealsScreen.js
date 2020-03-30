@@ -5,7 +5,7 @@ import commonStyles from '../constants/commonStyles';
 
 const CategoryMealsScreen = props => {
   const {
-    navigation: { navigate }
+    navigation: { goBack, navigate }
   } = props;
 
   return (
@@ -15,6 +15,12 @@ const CategoryMealsScreen = props => {
         title="Meal Detail"
         onPress={() => {
           navigate({ routeName: 'MealDetailScreen' });
+        }}
+      />
+      <Button
+        title="<- Go Back"
+        onPress={() => {
+          goBack();
         }}
       />
     </View>
