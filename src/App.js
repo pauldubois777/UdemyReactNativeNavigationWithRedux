@@ -1,8 +1,8 @@
 import React from 'react';
-import { useScreens } from 'react-native-screens';
+import { enableScreens } from 'react-native-screens';
 import AppNavigator from './navigation/AppNavigator';
 
-useScreens(); // Implements high performance screens
+enableScreens(); // Enable high performance screens
 
 const App = () => {
   return <AppNavigator />;
