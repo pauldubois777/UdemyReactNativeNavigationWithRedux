@@ -3,7 +3,6 @@ import { FlatList } from 'react-native';
 
 import { CATEGORIES } from '../mocks/mockData';
 import CategoryItem from '../components/CategoryItem';
-import Colors from '../constants/colors';
 
 const CategoriesScreen = props => {
   const {
@@ -35,14 +34,6 @@ const CategoriesScreen = props => {
       renderItem={renderCategoryItem}
     />
   );
-};
-
-CategoriesScreen.navigationOptions = {
-  headerTitle: 'Meal Categories',
-  headerStyle: {
-    backgroundColor: Colors.headerBackground
-  },
-  headerTintColor: Colors.headerText
 };
 
 export default CategoriesScreen;

@@ -2,7 +2,6 @@ import React from 'react';
 import { Button, StyleSheet, Text, View } from 'react-native';
 
 import commonStyles from '../constants/commonStyles';
-import Colors from '../constants/colors';
 
 const CategoryMealsScreen = props => {
   const {
@@ -31,21 +30,5 @@ const CategoryMealsScreen = props => {
 const styles = StyleSheet.create({
   screen: commonStyles.screen
 });
-
-CategoryMealsScreen.navigationOptions = navigationProps => {
-  const {
-    navigation: { getParam }
-  } = navigationProps;
-
-  const category = getParam('category');
-
-  return {
-    headerTitle: category.title,
-    headerStyle: {
-      backgroundColor: Colors.headerBackground
-    },
-    headerTintColor: Colors.headerText
-  };
-};
 
 export default CategoryMealsScreen;
