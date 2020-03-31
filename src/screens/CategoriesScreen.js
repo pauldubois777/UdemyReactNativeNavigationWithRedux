@@ -16,7 +16,14 @@ const CategoriesScreen = props => {
     return (
       <CategoryItem
         item={item}
-        onPress={() => navigate('CategoryMealsScreen')}
+        onPress={() =>
+          navigate({
+            routeName: 'CategoryMealsScreen',
+            params: {
+              category: item
+            }
+          })
+        }
       />
     );
   };
